@@ -1,4 +1,9 @@
-<!doctype html>
+<?php
+session_start();
+if(isset($_SESSION['valid'])) {
+	header("Location: links.php");
+}
+?><!doctype html>
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
@@ -34,7 +39,7 @@
 	<div class="logo"><img src="http://img15.hostingpics.net/pics/333606mitseologo.png"></div>
 	<!-- Main Form -->
 	<div class="login-form-1">
-		<form id="login-form" class="text-left" method="post" action="login.php">
+		<form id="login-form" class="text-left" method="post" action="inc/login.php">
 			<div class="login-form-main-message"></div>
 			<div class="main-login-form">
 				<div class="login-group">
